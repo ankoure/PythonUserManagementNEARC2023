@@ -1,0 +1,2213 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    Command line to run this workspace:
+#        "C:\Program Files\FME\fme.exe" M:\Users\akoure\NEARC2023\PortalCleanup.fmw
+#          --DestDataset_XLSXW "\\PortsmouthNH2\Data\FME\Portal\Users\Output"
+#          --Portal ""
+#          --Username ""
+#          --Password "********"
+#          --SourceDataset_XLSXR "$(FME_MF_DIR)ExampleUserSheet.xlsx"
+#          --FME_LAUNCH_VIEWER_APP "YES"
+#    
+#!   A0_PREVIEW_IMAGE="data:image/png;base64,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"
+#!   ARCGIS_COMPATIBILITY="ARCGIS_AUTO"
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BEGIN_PYTHON=""
+#!   BEGIN_TCL=""
+#!   CATEGORY=""
+#!   DESCRIPTION=""
+#!   DESTINATION="NONE"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DOC_EXTENTS="7725.38 2130.62"
+#!   DOC_TOP_LEFT="-3358.94 -911.617"
+#!   END_PYTHON=""
+#!   END_TCL=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="23619"
+#!   FME_BULK_MODE_THRESHOLD="2000"
+#!   FME_DOCUMENT_GUID="6d3a7da3-18ed-4667-a46d-e1ab5e8b6bd0"
+#!   FME_DOCUMENT_PRIORGUID="c6d903a9-b4df-40e9-9e8f-97378982d596"
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_NAMES_ENCODING="UTF-8"
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   FME_SERVER_SERVICES=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   HISTORY=""
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2023.1.0.0 (20230825 - Build 23619 - WIN64)"
+#!   LAST_SAVE_DATE="2023-10-18T17:30:05"
+#!   LOG_FILE=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOG_FEATURES="200"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="311"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   SAVE_ON_PROMPT_AND_RUN="Yes"
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   SOURCE="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   TERMINATE_REJECTED="YES"
+#!   TITLE=""
+#!   USAGE=""
+#!   USE_MARKDOWN=""
+#!   VIEW_POSITION="-3090.85 1455.09"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   ZOOM_SCALE="64"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="XLSXR"
+#!   DATASET="$(SourceDataset_XLSXR)"
+#!   KEYWORD="XLSXR_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE="xlsx_start_row &quot;&quot; xlsx_end_row &quot;&quot; xlsx_apply_filters &quot;No&quot;"
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_basename char(50) fme_color char(50) fme_dataset char(50) fme_feature_type char(50) fme_fill_color char(50) fme_geometry char(50) fme_primary_axis number(31,15) fme_rotation number(31,15) fme_secondary_axis number(31,15) fme_start_angle number(31,15) fme_sweep_angle number(31,15) fme_text_size number(31,15) fme_text_string char(50) fme_type char(50) multi_reader_full_id number(11,0) multi_reader_id number(11,0) multi_reader_keyword char(50) multi_reader_type char(50) xlsx_col_id number(11,0) xlsx_raster_format char(20) xlsx_raster_height number(11,0) xlsx_raster_location char(256) xlsx_raster_width number(11,0) xlsx_row_id number(11,0) xlsx_type char(20)"
+#!   DEFLINE_PARMS="&quot;GUI OPTIONAL NAMEDGROUP xlsx_table_settings_group xlsx_start_row%xlsx_end_row%xlsx_apply_filters Table&quot; &quot;&quot; &quot;GUI FORCE_DEFS OPTIONAL INTEGER xlsx_start_row Start Row:&quot; &quot;&quot; &quot;GUI FORCE_DEFS OPTIONAL INTEGER xlsx_end_row End Row:&quot; &quot;&quot; &quot;GUI OPTIONAL CHECKBOX xlsx_apply_filters Yes%No Apply Filter(s):&quot; No "
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE"
+#!   FTTR_TYPE="LISTBOX_ENCODED"
+#!   GENERATE_FME_BUILD_NUM="23619"
+#!   COORDSYS=""
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="XLSXR_IN_READ_BLANK_AS XLSXR_IN_APPLY_FILTERS XLSXR_IN_EXPAND_MERGED_CELLS XLSXR_IN_SCAN_SCHEMA_IF_DYNAMIC"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="ALLOW_DATASET_CONFLICT"
+#!   VALUE="YES"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="ATTRIBUTE_READING"
+#!   VALUE="DEFLINE"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="Sheet"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the Excel file(s)"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="raster_blob"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="datetime"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="time"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(31,15)"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="x_coordinate"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="y_coordinate"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="z_coordinate"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(15,7)"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(11,0)"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(11,0)"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(6,0)"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(6,0)"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(4,0)"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(4,0)"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="XLSXR"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="XLSXR"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="XLSXR"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="XLSXR"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="XLSXR"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="XLSXR"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="XLSXR"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="XLSXR"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="XLSXR"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="XLSXR"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="XLSXR"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="XLSXR"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="XLSXR"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="XLSXR"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="XLSXR"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="XLSXR"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="XLSXR"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_voxel_grid"
+#!   FORMAT="XLSXR"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="XLSXR"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Sheet1/Table1"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="54"
+#!   FEAT_GEOMTYPE="xlsx_none xlsx_point"
+#!   POSITION="-3358.9400394003937 131.99936353531066"
+#!   BOUNDING_RECT="-3358.9400394003937 131.99936353531066 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="XLSXR_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Username (Portal)" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Full Name (Portal)" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="License Type" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Role" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Groups Owned Count" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Groups Owned List" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Last Login" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Last Login (Pro)" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Termination Date (TAPI)" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Disabled" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Storage Usage (Bytes)" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Account Created" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Account Modified" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Pro Disconnected" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Pro Licenses" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Username (TAPI)" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Full Name (TAPI)" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Location" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Job Title" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Department Code" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Department" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Email" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Supervisor Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Supervisor Email" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_apply_filters" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_end_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_table_settings_group" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <READER_DATASETS>
+#! <DATASET
+#!   NAME="XLSXR_1"
+#!   OVERRIDE="-XLSXR_1_DATASET"
+#!   DATASET="XLSXR_1/ExampleUserSheet.xlsx"
+#! />
+#! </READER_DATASETS>
+#! <DEPENDENCIES>
+#! <PACKAGES>
+#! <PACKAGE
+#!   NAME="safe.emailer"
+#!   VERSION="3.4.2"
+#! />
+#! </PACKAGES>
+#! </DEPENDENCIES>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FILENAME_OR_ATTR DestDataset_XLSXW Excel_Workbook_2007(*.xlsx)|*.xlsx|Excel_Macro_Workbook(*.xlsm)|*.xlsm|Excel_Workbook_Pre_2007(*.xls)|*.xls|Excel_Files(*.xlsx;*.xlsm;*.xls)|*.xlsx;*.xlsm;*.xls|All_files(*)|* Destination Microsoft Excel File"
+#!   DEFAULT_VALUE="\\PortsmouthNH2\Data\FME\Portal\Users\Output"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI STRING Portal Enter Portal URL"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI STRING Username Enter Username"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI PASSWORD Password Enter a Password"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI MULTIFILE SourceDataset_XLSXR INCLUDE_WEB_BROWSER%Excel_Files(*.xlsx;*.xlsm;*.xls)|*.xlsx;*.xlsm;*.xls|Excel_Workbook_2007(*.xlsx)|*.xlsx|Excel_Macro_Workbook(*.xlsm)|*.xlsm|Excel_Binary_Workbook_-_Windows_Only(*.xlsb)|*.xlsb|Excel_Workbook_Pre_2007(*.xls)|*.xls|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|All_files(*)|* Source Microsoft Excel File(s):"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)ExampleUserSheet.xlsx"
+#!   IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <USER_PARAMETERS
+#!   FORM="eyJwYXJhbWV0ZXJzIjpbeyJhY2Nlc3NNb2RlIjoid3JpdGUiLCJkZWZhdWx0VmFsdWUiOiJcXFxcUG9ydHNtb3V0aE5IMlxcRGF0YVxcRk1FXFxQb3J0YWxcXFVzZXJzXFxPdXRwdXQiLCJkZXByZWNhdGVkRmxhZ3MiOlsibm9uZSJdLCJmaWx0ZXJzIjpbeyJkZXNjcmlwdGlvbiI6IkV4Y2VsIFdvcmtib29rIDIwMDciLCJmaWx0ZXIiOlsiKi54bHN4Il19LHsiZGVzY3JpcHRpb24iOiJFeGNlbCBNYWNybyBXb3JrYm9vayIsImZpbHRlciI6WyIqLnhsc20iXX0seyJkZXNjcmlwdGlvbiI6IkV4Y2VsIFdvcmtib29rIFByZSAyMDA3IiwiZmlsdGVyIjpbIioueGxzIl19LHsiZGVzY3JpcHRpb24iOiJFeGNlbCBGaWxlcyIsImZpbHRlciI6WyIqLnhsc3giLCIqLnhsc20iLCIqLnhscyJdfSx7ImRlc2NyaXB0aW9uIjoiQWxsIGZpbGVzIiwiZmlsdGVyIjpbIioiXX1dLCJpdGVtc1RvU2VsZWN0IjoiZmlsZXMiLCJuYW1lIjoiRGVzdERhdGFzZXRfWExTWFciLCJwcm9tcHQiOiJEZXN0aW5hdGlvbiBNaWNyb3NvZnQgRXhjZWwgRmlsZSIsInJlcXVpcmVkIjp0cnVlLCJzZWxlY3RNdWx0aXBsZSI6ZmFsc2UsInNob3dQcm9tcHQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoiZmlsZSIsInZhbGlkYXRlRXhpc3RlbmNlIjpmYWxzZSwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJkZWZhdWx0VmFsdWUiOiIiLCJuYW1lIjoiUG9ydGFsIiwicHJvbXB0IjoiRW50ZXIgUG9ydGFsIFVSTCIsInJlcXVpcmVkIjp0cnVlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInNob3dQcm9tcHQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJkZWZhdWx0VmFsdWUiOiIiLCJuYW1lIjoiVXNlcm5hbWUiLCJwcm9tcHQiOiJFbnRlciBVc2VybmFtZSIsInJlcXVpcmVkIjp0cnVlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInNob3dQcm9tcHQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJkZWZhdWx0VmFsdWUiOiIiLCJuYW1lIjoiUGFzc3dvcmQiLCJwcm9tcHQiOiJFbnRlciBhIFBhc3N3b3JkIiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJwYXNzd29yZCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiYWNjZXNzTW9kZSI6InJlYWQiLCJkZWZhdWx0VmFsdWUiOiIkKEZNRV9NRl9ESVIpRXhhbXBsZVVzZXJTaGVldC54bHN4IiwiZmlsdGVycyI6W3siZGVzY3JpcHRpb24iOiJFeGNlbCBGaWxlcyIsImZpbHRlciI6WyIqLnhsc3giLCIqLnhsc20iLCIqLnhscyJdfSx7ImRlc2NyaXB0aW9uIjoiRXhjZWwgV29ya2Jvb2sgMjAwNyIsImZpbHRlciI6WyIqLnhsc3giXX0seyJkZXNjcmlwdGlvbiI6IkV4Y2VsIE1hY3JvIFdvcmtib29rIiwiZmlsdGVyIjpbIioueGxzbSJdfSx7ImRlc2NyaXB0aW9uIjoiRXhjZWwgQmluYXJ5IFdvcmtib29rIC0gV2luZG93cyBPbmx5IiwiZmlsdGVyIjpbIioueGxzYiJdfSx7ImRlc2NyaXB0aW9uIjoiRXhjZWwgV29ya2Jvb2sgUHJlIDIwMDciLCJmaWx0ZXIiOlsiKi54bHMiXX0seyJkZXNjcmlwdGlvbiI6IkFyY2hpdmUgRmlsZXMiLCJmaWx0ZXIiOlsiKi43eiIsIiouN3ppcCIsIioucmFyIiwiKi5ydnoiLCIqLnRhciIsIioudGFyLmJ6MiIsIioudGFyLmd6IiwiKi50Z3oiLCIqLnppcCIsIiouemlweCJdfSx7ImRlc2NyaXB0aW9uIjoiQ29tcHJlc3NlZCBGaWxlcyIsImZpbHRlciI6WyIqLmJ6MiIsIiouZ3oiXX0seyJkZXNjcmlwdGlvbiI6IkFsbCBmaWxlcyIsImZpbHRlciI6WyIqIl19XSwiaW5jbHVkZVdlYkJyb3dzZXIiOnRydWUsIml0ZW1zVG9TZWxlY3QiOiJmaWxlcyIsIm5hbWUiOiJTb3VyY2VEYXRhc2V0X1hMU1hSIiwicHJvbXB0IjoiU291cmNlIE1pY3Jvc29mdCBFeGNlbCBGaWxlKHMpOiIsInJlcXVpcmVkIjp0cnVlLCJzZWxlY3RNdWx0aXBsZSI6dHJ1ZSwidHlwZSI6ImZpbGUiLCJ2YWxpZGF0ZUV4aXN0ZW5jZSI6ZmFsc2UsInZhbHVlVHlwZSI6InN0cmluZyJ9XX0="
+#! >
+#! <PARAMETER_INFO>
+#!     <INFO NAME="DestDataset_XLSXW" 
+#!   DEFAULT_VALUE="\\PortsmouthNH2\Data\FME\Portal\Users\Output"
+#!   SCOPE="DEPENDENT"
+#!   GENERATED_GUI_LINE="true"
+#!   GUI_LINE="GUI FILENAME_OR_ATTR DestDataset_XLSXW Excel_Workbook_2007(*.xlsx)|*.xlsx|Excel_Macro_Workbook(*.xlsm)|*.xlsm|Excel_Workbook_Pre_2007(*.xls)|*.xls|Excel_Files(*.xlsx;*.xlsm;*.xls)|*.xlsx;*.xlsm;*.xls|All_files(*)|* Destination Microsoft Excel File"
+#! />
+#!     <INFO NAME="Portal" 
+#!   DEFAULT_VALUE=""
+#!   SCOPE="STAND_ALONE"
+#!   GENERATED_GUI_LINE="true"
+#!   GUI_LINE="GUI STRING Portal Enter Portal URL"
+#! />
+#!     <INFO NAME="Username" 
+#!   DEFAULT_VALUE=""
+#!   SCOPE="STAND_ALONE"
+#!   GENERATED_GUI_LINE="true"
+#!   GUI_LINE="GUI STRING Username Enter Username"
+#! />
+#!     <INFO NAME="Password" 
+#!   DEFAULT_VALUE=""
+#!   SCOPE="STAND_ALONE"
+#!   GENERATED_GUI_LINE="true"
+#!   GUI_LINE="GUI PASSWORD Password Enter a Password"
+#! />
+#!     <INFO NAME="SourceDataset_XLSXR" 
+#!   DEFAULT_VALUE="$(FME_MF_DIR)ExampleUserSheet.xlsx"
+#!   SCOPE="DEPENDENT"
+#!   GENERATED_GUI_LINE="true"
+#!   GUI_LINE="GUI MULTIFILE SourceDataset_XLSXR INCLUDE_WEB_BROWSER%Excel_Files(*.xlsx;*.xlsm;*.xls)|*.xlsx;*.xlsm;*.xls|Excel_Workbook_2007(*.xlsx)|*.xlsx|Excel_Macro_Workbook(*.xlsm)|*.xlsm|Excel_Binary_Workbook_-_Windows_Only(*.xlsb)|*.xlsb|Excel_Workbook_Pre_2007(*.xls)|*.xls|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|All_files(*)|* Source Microsoft Excel File(s):"
+#! />
+#! </PARAMETER_INFO>
+#! </USER_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="40"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;hr { height: 1px; border-width: 0; }&#10;li.unchecked::marker { content: &quot;\2610&quot;; }&#10;li.checked::marker { content: &quot;\2612&quot;; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Segoe UI&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Filter by License Type (AGE)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-3203.9305002356214 538.40309940842599"
+#!   TOP_LEFT="-3203.9305002356214 538.40309940842599"
+#!   BOTTOM_RIGHT="-2773.9305002356214 537.40309940842599"
+#!   BOUNDING_RECT="-3203.9305002356214 538.40309940842599 430 1"
+#!   ORDER="500000000000255.13"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   UUID="{3a6338e4-190f-4247-aa60-41d836abb293}"
+#!   COLOUR="1,1,0.95686274509803926,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="2"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="41"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;hr { height: 1px; border-width: 0; }&#10;li.unchecked::marker { content: &quot;\2610&quot;; }&#10;li.checked::marker { content: &quot;\2612&quot;; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Segoe UI&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Check if user belongs to groups, remove them, return User Object&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-2395.9947389693807 -574.84943281544349"
+#!   TOP_LEFT="-2395.9947389693807 -574.84943281544349"
+#!   BOTTOM_RIGHT="-1965.9947389693807 -575.84943281544349"
+#!   BOUNDING_RECT="-2395.9947389693807 -574.84943281544349 430 1"
+#!   ORDER="500000000000257.13"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   UUID="{43c64ed6-ddcd-4907-842a-e35972d512ce}"
+#!   COLOUR="1,1,0.95686274509803926,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="3"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="42"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;hr { height: 1px; border-width: 0; }&#10;li.unchecked::marker { content: &quot;\2610&quot;; }&#10;li.checked::marker { content: &quot;\2612&quot;; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Segoe UI&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Input User Object, Delete User&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-1536.9448614066132 -711.56955001661572"
+#!   TOP_LEFT="-1536.9448614066132 -711.56955001661572"
+#!   BOTTOM_RIGHT="-1082.9448614066132 -712.56955001661572"
+#!   BOUNDING_RECT="-1536.9448614066132 -711.56955001661572 454 1"
+#!   ORDER="500000000000259.13"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   UUID="{97ab5ff4-89f6-4fdd-8ecf-fda271f464bd}"
+#!   COLOUR="1,0.85490196078431369,0.59999999999999998,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="4"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="44"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;hr { height: 1px; border-width: 0; }&#10;li.unchecked::marker { content: &quot;\2610&quot;; }&#10;li.checked::marker { content: &quot;\2612&quot;; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Segoe UI&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Check if User owns Content. NOTE: This process is buggy and will return a None type value which is equivalent to NULL. &lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Need to Fix/Find better way of doing this. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-895.81383009630008 1219.0052225427685"
+#!   TOP_LEFT="-895.81383009630008 1219.0052225427685"
+#!   BOTTOM_RIGHT="-441.81383009630008 1218.0052225427685"
+#!   BOUNDING_RECT="-895.81383009630008 1219.0052225427685 454 1"
+#!   ORDER="500000000000264.13"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   UUID="{3060a88e-e822-4d8f-a01f-ef003be13537}"
+#!   COLOUR="1,1,0.95686274509803926,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="13"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="45"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;hr { height: 1px; border-width: 0; }&#10;li.unchecked::marker { content: &quot;\2610&quot;; }&#10;li.checked::marker { content: &quot;\2612&quot;; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Segoe UI&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Check if user owns groups OR content&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-574.4102231331708 -92.737406400373402"
+#!   TOP_LEFT="-574.4102231331708 -92.737406400373402"
+#!   BOTTOM_RIGHT="-120.4102231331708 -93.737406400373402"
+#!   BOUNDING_RECT="-574.4102231331708 -92.737406400373402 454 1"
+#!   ORDER="500000000000274.13"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   UUID="{e15bcce1-25da-4193-8912-7f5b46bbe484}"
+#!   COLOUR="0.63529411764705879,0.80000000000000004,0.59999999999999998,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="14"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="46"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;hr { height: 1px; border-width: 0; }&#10;li.unchecked::marker { content: &quot;\2610&quot;; }&#10;li.checked::marker { content: &quot;\2612&quot;; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Segoe UI&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Check if user belongs to groups, remove them, return User Object&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="320.88034291075746 -85.215659754337139"
+#!   TOP_LEFT="320.88034291075746 -85.215659754337139"
+#!   BOTTOM_RIGHT="750.88034291075746 -86.215659754337139"
+#!   BOUNDING_RECT="320.88034291075746 -85.215659754337139 430 1"
+#!   ORDER="500000000000257.13"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   UUID="{b82827c4-0007-443d-9394-af4c2f9afabe}"
+#!   COLOUR="0.63529411764705879,0.80000000000000004,0.59999999999999998,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="16"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="47"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;hr { height: 1px; border-width: 0; }&#10;li.unchecked::marker { content: &quot;\2610&quot;; }&#10;li.checked::marker { content: &quot;\2612&quot;; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Segoe UI&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Input User Object, Delete User&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="880.76056171294454 -311.21176721540991"
+#!   TOP_LEFT="880.76056171294454 -311.21176721540991"
+#!   BOTTOM_RIGHT="1334.7605617129445 -312.21176721540991"
+#!   BOUNDING_RECT="880.76056171294454 -311.21176721540991 454 1"
+#!   ORDER="500000000000259.13"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   UUID="{c8da20ca-964e-4dc1-b5e6-81ae337667e1}"
+#!   COLOUR="0.63529411764705879,0.80000000000000004,0.59999999999999998,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="17"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#!   IDENTIFIER="48"
+#!   NAME="ArcGIS Enterprise"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="-2758.4202976826118 433.74769010923455"
+#!   ORDER="500000000000254.13"
+#!   PALETTE_COLOR="Color1"
+#!   BOTTOM_RIGHT="-2001.4104127689516 -571.47069540795428"
+#!   BOUNDING_RECT="-2758.4202976826118 433.74769010923455 757.00988491366024 1005.2183855171888"
+#!   STICKY="false"
+#!   COLOUR="0.59999999999999998,0.80000000000000004,0.80000000000000004,1"
+#!   CONTENTS=""
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="49"
+#!   NAME="New Bookmark"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="2194.569989561458 691.63891387968147"
+#!   ORDER="500000000000261.13"
+#!   PALETTE_COLOR="Color2"
+#!   BOTTOM_RIGHT="4366.4393826921769 -500.47253841131237"
+#!   BOUNDING_RECT="2194.569989561458 691.63891387968147 2171.8693931307189 1192.1114522909938"
+#!   STICKY="true"
+#!   COLOUR="0.63529411764705879,0.80000000000000004,0.59999999999999998,1"
+#!   CONTENTS="11 55 10 26 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="50"
+#!   NAME="Users Requiring Manual Intervention"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="965.8814758514236 -538.99162786179386"
+#!   ORDER="500000000000279.13"
+#!   PALETTE_COLOR="Color4"
+#!   BOTTOM_RIGHT="2849.0670600738013 -911.61740911960669"
+#!   BOUNDING_RECT="965.8814758514236 -538.99162786179386 1883.1855842223777 372.62578125781283"
+#!   STICKY="true"
+#!   COLOUR="0.85098039215686272,0.92941176470588238,0.60392156862745094,1"
+#!   CONTENTS="9 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="51"
+#!   NAME="CreatorTypes"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="-1952.0971302842736 699.1226750822143"
+#!   ORDER="500000000000290.13"
+#!   PALETTE_COLOR="Color2"
+#!   BOTTOM_RIGHT="2076.0509326352785 -395.22471998523633"
+#!   BOUNDING_RECT="-1952.0971302842736 699.1226750822143 4028.1480629195521 1094.3473950674506"
+#!   STICKY="true"
+#!   COLOUR="0.63529411764705879,0.80000000000000004,0.59999999999999998,1"
+#!   CONTENTS="23 29 36 13 28 46 47 6 45 34 7 35 5 24 30 15 17 32 16 33 14 27 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="52"
+#!   NAME="Viewers and FieldWorkers"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="-1952.0971302842736 -396.09587855652353"
+#!   ORDER="500000000000293.13"
+#!   PALETTE_COLOR="Color3"
+#!   BOTTOM_RIGHT="481.95498801468602 -896.09587855652353"
+#!   BOUNDING_RECT="-1952.0971302842736 -396.09587855652353 2434.0521182989596 500"
+#!   STICKY="true"
+#!   COLOUR="1,0.85490196078431369,0.59999999999999998,1"
+#!   CONTENTS="3 18 4 42 "
+#! >
+#! </BOOKMARK>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="2"
+#!   TYPE="AttributeFilter"
+#!   VERSION="5"
+#!   POSITION="-2630.8148549615189 250.41002339923443"
+#!   BOUNDING_RECT="-2630.8148549615189 250.41002339923443 430 71"
+#!   ORDER="500000000000252.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="23619"
+#! >
+#!     <OUTPUT_FEAT NAME="&lt;lt&gt;EMPTY&lt;gt&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;lt&gt;MISSING&lt;gt&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="&lt;lt&gt;NULL&lt;gt&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <OUTPUT_FEAT NAME="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="3"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <OUTPUT_FEAT NAME="creatorUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="4"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <OUTPUT_FEAT NAME="fieldWorkerUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="5"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <OUTPUT_FEAT NAME="viewerUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="6"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="License&lt;space&gt;Type"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_VALUES" PARM_VALUE="&lt;lt&gt;Empty&lt;gt&gt;,&lt;lt&gt;Missing&lt;gt&gt;,&lt;lt&gt;Null&lt;gt&gt;,&lt;lt&gt;Unfiltered&lt;gt&gt;,creatorUT,fieldWorkerUT,viewerUT"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_VALUES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PRESERVE_FEATURE_ORDER" PARM_VALUE="Per Output Port"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="LicenseType"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="3"
+#!   TYPE="PythonCaller"
+#!   VERSION="4"
+#!   POSITION="-1836.1145201671934 -546.09849530606846"
+#!   BOUNDING_RECT="-1836.1145201671934 -546.09849530606846 430 71"
+#!   ORDER="500000000000256.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="23619"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="HIDE_ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSOURCE" PARM_VALUE="import&lt;space&gt;fme&lt;lf&gt;import&lt;space&gt;fmeobjects&lt;lf&gt;from&lt;space&gt;arcgis.gis&lt;space&gt;import&lt;space&gt;GIS&lt;lf&gt;gis&lt;space&gt;=&lt;space&gt;GIS&lt;openparen&gt;url=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Portal&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;username=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Username&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;password=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Password&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;&lt;lf&gt;def&lt;space&gt;groupRemover&lt;openparen&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;portaluser&lt;space&gt;=&lt;space&gt;gis.users.get&lt;openparen&gt;username&lt;space&gt;=&lt;space&gt;feature.getAttribute&lt;openparen&gt;&lt;apos&gt;baseusername&lt;apos&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;if&lt;space&gt;portaluser&lt;space&gt;!=&lt;space&gt;None:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;user_groups&lt;space&gt;=&lt;space&gt;portaluser.groups&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;for&lt;space&gt;group&lt;space&gt;in&lt;space&gt;user_groups:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;targetgroup&lt;space&gt;=&lt;space&gt;gis.groups.get&lt;openparen&gt;group.id&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;targetgroup.remove_users&lt;openparen&gt;&lt;openbracket&gt;portaluser&lt;closebracket&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;if&lt;space&gt;portaluser&lt;space&gt;==&lt;space&gt;None:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;portaluser&lt;space&gt;=&lt;space&gt;gis.users.get&lt;openparen&gt;username&lt;space&gt;=&lt;space&gt;feature.getAttribute&lt;openparen&gt;&lt;apos&gt;baseusername&lt;apos&gt;&lt;closeparen&gt;+&lt;quote&gt;&lt;at&gt;yourcompany.com&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;try:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;user_groups&lt;space&gt;=&lt;space&gt;portaluser.groups&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;for&lt;space&gt;group&lt;space&gt;in&lt;space&gt;user_groups:&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;targetgroup&lt;space&gt;=&lt;space&gt;gis.groups.get&lt;openparen&gt;group.id&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;targetgroup.remove_users&lt;openparen&gt;&lt;openbracket&gt;portaluser&lt;closebracket&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;except&lt;space&gt;Exception&lt;space&gt;as&lt;space&gt;e:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;print&lt;openparen&gt;e&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;return&lt;space&gt;feature&lt;lf&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSYMBOL" PARM_VALUE="groupRemover"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="GroupRemover"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="4"
+#!   TYPE="PythonCaller"
+#!   VERSION="4"
+#!   POSITION="-895.81383009630008 -604.69283124942785"
+#!   BOUNDING_RECT="-895.81383009630008 -604.69283124942785 454 71"
+#!   ORDER="500000000000258.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="23619"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="HIDE_ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSOURCE" PARM_VALUE="import&lt;space&gt;fme&lt;lf&gt;import&lt;space&gt;fmeobjects&lt;lf&gt;from&lt;space&gt;arcgis.gis&lt;space&gt;import&lt;space&gt;GIS&lt;lf&gt;gis&lt;space&gt;=&lt;space&gt;GIS&lt;openparen&gt;url=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Portal&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;username=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Username&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;password=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Password&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;def&lt;space&gt;deleteUser&lt;openparen&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;try:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;portaluser&lt;space&gt;=&lt;space&gt;gis.users.get&lt;openparen&gt;username&lt;space&gt;=&lt;space&gt;feature.getAttribute&lt;openparen&gt;&lt;apos&gt;baseusername&lt;apos&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;portaluser.delete&lt;openparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;except&lt;space&gt;Exception&lt;space&gt;as&lt;space&gt;e:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;print&lt;openparen&gt;e&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSYMBOL" PARM_VALUE="deleteUser"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="DeleteUser"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="5"
+#!   TYPE="AttributeFilter"
+#!   VERSION="5"
+#!   POSITION="-1863.1484406699856 577.07953933706881"
+#!   BOUNDING_RECT="-1863.1484406699856 577.07953933706881 430 71"
+#!   ORDER="500000000000265.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="23619"
+#! >
+#!     <OUTPUT_FEAT NAME="&lt;lt&gt;EMPTY&lt;gt&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;lt&gt;MISSING&lt;gt&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="&lt;lt&gt;NULL&lt;gt&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <OUTPUT_FEAT NAME="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="3"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="Pro&lt;space&gt;Licenses"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_VALUES" PARM_VALUE="&lt;lt&gt;Empty&lt;gt&gt;,&lt;lt&gt;Missing&lt;gt&gt;,&lt;lt&gt;Null&lt;gt&gt;,&lt;lt&gt;Unfiltered&lt;gt&gt;"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_VALUES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PRESERVE_FEATURE_ORDER" PARM_VALUE="Per Output Port"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ProUsers"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="6"
+#!   TYPE="PythonCaller"
+#!   VERSION="4"
+#!   POSITION="-1425.9146157232535 67.042649865397834"
+#!   BOUNDING_RECT="-1425.9146157232535 67.042649865397834 430 71"
+#!   ORDER="500000000000267.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="23619"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="HIDE_ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSOURCE" PARM_VALUE="import&lt;space&gt;fme&lt;lf&gt;import&lt;space&gt;fmeobjects&lt;lf&gt;from&lt;space&gt;arcgis.gis&lt;space&gt;import&lt;space&gt;GIS&lt;lf&gt;&lt;lf&gt;gis&lt;space&gt;=&lt;space&gt;GIS&lt;openparen&gt;url=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Portal&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;username=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Username&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;password=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Password&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;def&lt;space&gt;license_revoker&lt;openparen&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;try:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;pro_license&lt;space&gt;=&lt;space&gt;gis.admin.license.get&lt;openparen&gt;&lt;apos&gt;ArcGIS&lt;space&gt;Pro&lt;apos&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;pro_license.assign&lt;openparen&gt;username=feature.getAttribute&lt;openparen&gt;&lt;apos&gt;baseusername&lt;apos&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;space&gt;entitlements=&lt;openbracket&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;except&lt;space&gt;Exception&lt;space&gt;as&lt;space&gt;e:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;print&lt;openparen&gt;e&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSYMBOL" PARM_VALUE="license_revoker"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="RevokeLicense"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="7"
+#!   TYPE="PythonCaller"
+#!   VERSION="4"
+#!   POSITION="965.8814758514236 501.63766386718135"
+#!   BOUNDING_RECT="965.8814758514236 501.63766386718135 430 71"
+#!   ORDER="500000000000276.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="23619"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="contentOwned" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="HIDE_ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSOURCE" PARM_VALUE="import&lt;space&gt;fme&lt;lf&gt;import&lt;space&gt;fmeobjects&lt;lf&gt;from&lt;space&gt;arcgis.gis&lt;space&gt;import&lt;space&gt;GIS&lt;lf&gt;gis&lt;space&gt;=&lt;space&gt;GIS&lt;openparen&gt;url=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Portal&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;username=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Username&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;password=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Password&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;def&lt;space&gt;disableUser&lt;openparen&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;try:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;user&lt;space&gt;=&lt;space&gt;gis.users.get&lt;openparen&gt;username=feature.getAttribute&lt;openparen&gt;&lt;apos&gt;baseusername&lt;apos&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;user.disable&lt;openparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;#feature.setAttribute&lt;openparen&gt;&lt;apos&gt;contentOwned&lt;apos&gt;&lt;comma&gt;&lt;space&gt;content_count&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;return&lt;space&gt;feature&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;except&lt;space&gt;Exception&lt;space&gt;as&lt;space&gt;e:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;print&lt;openparen&gt;e&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSYMBOL" PARM_VALUE="disableUser"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="DisableUser"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="9"
+#!   TYPE="HTMLReportGenerator"
+#!   VERSION="1"
+#!   POSITION="1688.663594329739 -740.73454779099336"
+#!   BOUNDING_RECT="1688.663594329739 -740.73454779099336 522.00106825772946 71"
+#!   ORDER="500000000000251.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="23619"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="html_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="CONTENTS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CONTENT_LIST" PARM_VALUE="HEADER TABLE"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="PAGE_CONFIG" PARM_VALUE="HEADER{{TEXT;Users&lt;space&gt;Requiring&lt;space&gt;Manual&lt;space&gt;Intervention&lt;space&gt;;HEADER;NO;HEADER_ID;;ALIGNMENT;LEFT;COLOR;0&lt;comma&gt;0&lt;comma&gt;0;FME_CONTROLLER_QUERY_FILE;transformers&lt;solidus&gt;dependencies&lt;solidus&gt;html5&lt;solidus&gt;Header.fme;FME_CONTROLLER_CHOICE;Header}}TABLE{{STYLE;BORDERED;TABLE;Full&lt;space&gt;Name&lt;space&gt;&lt;openparen&gt;TAPI&lt;closeparen&gt;|Name/License&lt;space&gt;Type|License/Pro&lt;space&gt;Licenses|Pro?/Supervisor&lt;space&gt;Name|Boss&lt;space&gt;Name/Supervisor&lt;space&gt;Email|Boss&lt;space&gt;Email/Platform|Portal&lt;space&gt;or&lt;space&gt;AGO?/contentOwned|Number&lt;space&gt;of&lt;space&gt;Items/Groups&lt;space&gt;Owned&lt;space&gt;Count|Groups&lt;space&gt;Owned;FME_CONTROLLER_QUERY_FILE;transformers&lt;solidus&gt;dependencies&lt;solidus&gt;html5&lt;solidus&gt;Table.fme;FME_CONTROLLER_CHOICE;Table}}"/>
+#!     <XFORM_PARM PARM_NAME="PAGE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TITLE" PARM_VALUE="Users&lt;space&gt;Requiring&lt;space&gt;Manual&lt;space&gt;Intervention&lt;space&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ManualInterventionTable"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="10"
+#!   TYPE="HTMLReportGenerator"
+#!   VERSION="1"
+#!   POSITION="2343.5106874050198 313.7518498027448"
+#!   BOUNDING_RECT="2343.5106874050198 313.7518498027448 430 71"
+#!   ORDER="500000000000251.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="23619"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="html_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="CONTENTS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CONTENT_LIST" PARM_VALUE="HEADER TABLE"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="PAGE_CONFIG" PARM_VALUE="HEADER{{TEXT;Users&lt;space&gt;Deleted;HEADER;NO;HEADER_ID;;ALIGNMENT;LEFT;COLOR;0&lt;comma&gt;0&lt;comma&gt;0;FME_CONTROLLER_QUERY_FILE;transformers&lt;solidus&gt;dependencies&lt;solidus&gt;html5&lt;solidus&gt;Header.fme;FME_CONTROLLER_CHOICE;Header}}TABLE{{STYLE;BORDERED;TABLE;Full&lt;space&gt;Name&lt;space&gt;&lt;openparen&gt;TAPI&lt;closeparen&gt;|Name/License&lt;space&gt;Type|License/Pro&lt;space&gt;Licenses|Pro?/Supervisor&lt;space&gt;Name|Boss&lt;space&gt;Name/Supervisor&lt;space&gt;Email|Boss&lt;space&gt;Email/Platform|Portal&lt;space&gt;or&lt;space&gt;AGO?/contentOwned|Number&lt;space&gt;of&lt;space&gt;Items/Groups&lt;space&gt;Owned&lt;space&gt;Count|Groups&lt;space&gt;Owned;FME_CONTROLLER_QUERY_FILE;transformers&lt;solidus&gt;dependencies&lt;solidus&gt;html5&lt;solidus&gt;Table.fme;FME_CONTROLLER_CHOICE;Table}}"/>
+#!     <XFORM_PARM PARM_NAME="PAGE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TITLE" PARM_VALUE="$(DestDataset_XLSXW)"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="DeletedUsersTable"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="11"
+#!   TYPE="HTMLLayouter"
+#!   VERSION="0"
+#!   POSITION="2855.227134372557 -56.464722244961195"
+#!   BOUNDING_RECT="2855.227134372557 -56.464722244961195 454 71"
+#!   ORDER="500000000000283.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="23619"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="html_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="COLUMN" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="DIV_STYLE" PARM_VALUE="SOLID"/>
+#!     <XFORM_PARM PARM_NAME="GRID_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="LAYOUT" PARM_VALUE="VERTICAL"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ROW" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="STYLE_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="TITLE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="HTMLLayouter"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="13"
+#!   TYPE="PythonCaller"
+#!   VERSION="4"
+#!   POSITION="-869.93104812033198 335.63766386718225"
+#!   BOUNDING_RECT="-869.93104812033198 335.63766386718225 454 71"
+#!   ORDER="500000000000263.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="23619"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="contentOwned" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="HIDE_ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE="contentOwned"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSOURCE" PARM_VALUE="import&lt;space&gt;fme&lt;lf&gt;import&lt;space&gt;fmeobjects&lt;lf&gt;from&lt;space&gt;arcgis.gis&lt;space&gt;import&lt;space&gt;GIS&lt;lf&gt;gis&lt;space&gt;=&lt;space&gt;GIS&lt;openparen&gt;url=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Portal&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;username=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Username&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;password=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Password&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;def&lt;space&gt;contentCount&lt;openparen&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;qe&lt;space&gt;=&lt;space&gt;f&lt;quote&gt;owner:&lt;space&gt;&lt;opencurly&gt;feature.getAttribute&lt;openparen&gt;&lt;apos&gt;baseusername&lt;apos&gt;&lt;closeparen&gt;&lt;closecurly&gt;&lt;quote&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;content_count&lt;space&gt;=&lt;space&gt;gis.content.advanced_search&lt;openparen&gt;query=qe&lt;comma&gt;return_count=True&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;print&lt;openparen&gt;content_count&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;feature.setAttribute&lt;openparen&gt;&lt;apos&gt;contentOwned&lt;apos&gt;&lt;comma&gt;&lt;space&gt;content_count&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;return&lt;space&gt;feature&lt;lf&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSYMBOL" PARM_VALUE="contentCount"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="contentCount_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="14"
+#!   TYPE="Tester"
+#!   VERSION="3"
+#!   POSITION="-265.95154218060998 335.63766386718225"
+#!   BOUNDING_RECT="-265.95154218060998 335.63766386718225 430 71"
+#!   ORDER="500000000000273.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="23619"
+#! >
+#!     <OUTPUT_FEAT NAME="PASSED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="contentOwned" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="FAILED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="contentOwned" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="OR"/>
+#!     <XFORM_PARM PARM_NAME="COMPOSITE_MSG" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PRESERVE_FEATURE_ORDER" PARM_VALUE="Per Output Port"/>
+#!     <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST &lt;at&gt;Value&lt;openparen&gt;Groups&lt;space&gt;Owned&lt;space&gt;Count&lt;closeparen&gt; &gt; 0&#10;TEST &lt;at&gt;Value&lt;openparen&gt;contentOwned&lt;closeparen&gt; &gt; 0"/>
+#!     <XFORM_PARM PARM_NAME="TEST_CLAUSE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="TEST"/>
+#!     <XFORM_PARM PARM_NAME="TEST_PREVIEW_GROUP" PARM_VALUE="FME_DISCLOSURE_CLOSED"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="GroupsOwned_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="15"
+#!   TYPE="Tester"
+#!   VERSION="3"
+#!   POSITION="320.88034291075746 127.04264986539829"
+#!   BOUNDING_RECT="320.88034291075746 127.04264986539829 434.00106825772946 71"
+#!   ORDER="500000000000284.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="23619"
+#! >
+#!     <OUTPUT_FEAT NAME="PASSED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="contentOwned" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="FAILED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="contentOwned" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="OR"/>
+#!     <XFORM_PARM PARM_NAME="COMPOSITE_MSG" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PRESERVE_FEATURE_ORDER" PARM_VALUE="Per Output Port"/>
+#!     <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST contentOwned ATTRIBUTE_VALUE_NULL &quot;&quot;&#10;TEST Groups&lt;space&gt;Owned&lt;space&gt;Count ATTRIBUTE_VALUE_NULL &quot;&quot;"/>
+#!     <XFORM_PARM PARM_NAME="TEST_CLAUSE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="TEST"/>
+#!     <XFORM_PARM PARM_NAME="TEST_PREVIEW_GROUP" PARM_VALUE="FME_DISCLOSURE_CLOSED"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="CheckForNullValues_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="16"
+#!   TYPE="PythonCaller"
+#!   VERSION="4"
+#!   POSITION="880.76056171294476 -56.464722244961195"
+#!   BOUNDING_RECT="880.76056171294476 -56.464722244961195 430 71"
+#!   ORDER="500000000000256.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="23619"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="contentOwned" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="HIDE_ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSOURCE" PARM_VALUE="import&lt;space&gt;fme&lt;lf&gt;import&lt;space&gt;fmeobjects&lt;lf&gt;from&lt;space&gt;arcgis.gis&lt;space&gt;import&lt;space&gt;GIS&lt;lf&gt;gis&lt;space&gt;=&lt;space&gt;GIS&lt;openparen&gt;url=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Portal&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;username=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Username&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;password=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Password&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;&lt;lf&gt;def&lt;space&gt;groupRemover&lt;openparen&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;portaluser&lt;space&gt;=&lt;space&gt;gis.users.get&lt;openparen&gt;username&lt;space&gt;=&lt;space&gt;feature.getAttribute&lt;openparen&gt;&lt;apos&gt;baseusername&lt;apos&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;if&lt;space&gt;portaluser&lt;space&gt;!=&lt;space&gt;None:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;user_groups&lt;space&gt;=&lt;space&gt;portaluser.groups&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;for&lt;space&gt;group&lt;space&gt;in&lt;space&gt;user_groups:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;targetgroup&lt;space&gt;=&lt;space&gt;gis.groups.get&lt;openparen&gt;group.id&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;targetgroup.remove_users&lt;openparen&gt;&lt;openbracket&gt;portaluser&lt;closebracket&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;if&lt;space&gt;portaluser&lt;space&gt;==&lt;space&gt;None:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;portaluser&lt;space&gt;=&lt;space&gt;gis.users.get&lt;openparen&gt;username&lt;space&gt;=&lt;space&gt;feature.getAttribute&lt;openparen&gt;&lt;apos&gt;baseusername&lt;apos&gt;&lt;closeparen&gt;+&lt;quote&gt;&lt;at&gt;terracon.com&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;try:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;user_groups&lt;space&gt;=&lt;space&gt;portaluser.groups&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;for&lt;space&gt;group&lt;space&gt;in&lt;space&gt;user_groups:&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;targetgroup&lt;space&gt;=&lt;space&gt;gis.groups.get&lt;openparen&gt;group.id&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;targetgroup.remove_users&lt;openparen&gt;&lt;openbracket&gt;portaluser&lt;closebracket&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;except&lt;space&gt;Exception&lt;space&gt;as&lt;space&gt;e:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;print&lt;openparen&gt;e&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSYMBOL" PARM_VALUE="groupRemover"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="GroupRemover_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="17"
+#!   TYPE="PythonCaller"
+#!   VERSION="4"
+#!   POSITION="1521.8915930232577 -204.3350484482234"
+#!   BOUNDING_RECT="1521.8915930232577 -204.3350484482234 454 71"
+#!   ORDER="500000000000258.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="23619"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="Username (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (Portal)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="License Type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Role" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Groups Owned List" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Last Login (Pro)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Termination Date (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Disabled" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Storage Usage (Bytes)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Created" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Account Modified" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Disconnected" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pro Licenses" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Username (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Full Name (TAPI)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Location" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Job Title" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department Code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Department" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Supervisor Email" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="contentOwned" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="HIDE_ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSOURCE" PARM_VALUE="import&lt;space&gt;fme&lt;lf&gt;import&lt;space&gt;fmeobjects&lt;lf&gt;from&lt;space&gt;arcgis.gis&lt;space&gt;import&lt;space&gt;GIS&lt;lf&gt;gis&lt;space&gt;=&lt;space&gt;GIS&lt;openparen&gt;url=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Portal&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;username=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Username&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;password=str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;Password&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;def&lt;space&gt;deleteUser&lt;openparen&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;try:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;portaluser&lt;space&gt;=&lt;space&gt;gis.users.get&lt;openparen&gt;username&lt;space&gt;=&lt;space&gt;feature.getAttribute&lt;openparen&gt;&lt;apos&gt;baseusername&lt;apos&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;portaluser.delete&lt;openparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;return&lt;space&gt;feature&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;except&lt;space&gt;Exception&lt;space&gt;as&lt;space&gt;e:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;print&lt;openparen&gt;e&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSYMBOL" PARM_VALUE="deleteUser"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="DeleteUser_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="55"
+#!   TYPE="safe.emailer.Emailer"
+#!   VERSION="1"
+#!   POSITION="3667.0288577885781 117.18867188671888"
+#!   BOUNDING_RECT="3667.0288577885781 117.18867188671888 454 71"
+#!   ORDER="500000000000294.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="23619"
+#! >
+#!     <OUTPUT_FEAT NAME="Sent"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="html_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="html_content" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ADDRESSING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTACHGROUP" PARM_VALUE="FME_DISCLOSURE_CLOSED"/>
+#!     <XFORM_PARM PARM_NAME="ATTACHMENTTABLE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="BCC" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="BODY" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CC" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CONTENT" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FROM" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SERVICE" PARM_VALUE="Generic SMTP"/>
+#!     <XFORM_PARM PARM_NAME="SERVICEGROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SMTP_CONNECTION" PARM_VALUE="HOST;;PORT;25;ENCRYPTION;None;TIMEOUT;60;AUTHENTICATION;No;USERNAME;&lt;Unused&gt;;PASSWORD;&lt;Unused&gt;;FME_CONTROLLER_QUERY_FILE;&quot;dependencies/Generic SMTP.fme&quot;;FME_CONTROLLER_CHOICE;&quot;Generic SMTP&quot;"/>
+#!     <XFORM_PARM PARM_NAME="SUBJECT" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TO" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Emailer"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="53"
+#!   SOURCE_NODE="54"
+#!   TARGET_NODE="2"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="18"
+#!   SOURCE_NODE="3"
+#!   TARGET_NODE="4"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="19"
+#!   SOURCE_NODE="4"
+#!   TARGET_NODE="10"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="23"
+#!   SOURCE_NODE="5"
+#!   TARGET_NODE="13"
+#!   SOURCE_PORT_DESC="fo 0 &lt;lt&gt;lt&lt;gt&gt;EMPTY&lt;lt&gt;gt&lt;gt&gt;"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="24"
+#!   SOURCE_NODE="6"
+#!   TARGET_NODE="13"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="21"
+#!   SOURCE_NODE="7"
+#!   TARGET_NODE="9"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="25"
+#!   SOURCE_NODE="9"
+#!   TARGET_NODE="11"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="26"
+#!   SOURCE_NODE="10"
+#!   TARGET_NODE="11"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="56"
+#!   SOURCE_NODE="11"
+#!   TARGET_NODE="55"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="28"
+#!   SOURCE_NODE="13"
+#!   TARGET_NODE="14"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="27"
+#!   SOURCE_NODE="14"
+#!   TARGET_NODE="7"
+#!   SOURCE_PORT_DESC="fo 0 PASSED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="29"
+#!   SOURCE_NODE="15"
+#!   TARGET_NODE="7"
+#!   SOURCE_PORT_DESC="fo 0 PASSED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="30"
+#!   SOURCE_NODE="16"
+#!   TARGET_NODE="17"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="31"
+#!   SOURCE_NODE="17"
+#!   TARGET_NODE="10"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="32"
+#!   SOURCE_NODE="5"
+#!   TARGET_NODE="13"
+#!   SOURCE_PORT_DESC="fo 1 &lt;lt&gt;lt&lt;gt&gt;MISSING&lt;lt&gt;gt&lt;gt&gt;"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="33"
+#!   SOURCE_NODE="14"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="fo 1 FAILED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="34"
+#!   SOURCE_NODE="15"
+#!   TARGET_NODE="16"
+#!   SOURCE_PORT_DESC="fo 1 FAILED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="35"
+#!   SOURCE_NODE="5"
+#!   TARGET_NODE="13"
+#!   SOURCE_PORT_DESC="fo 2 &lt;lt&gt;lt&lt;gt&gt;NULL&lt;lt&gt;gt&lt;gt&gt;"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="36"
+#!   SOURCE_NODE="5"
+#!   TARGET_NODE="6"
+#!   SOURCE_PORT_DESC="fo 3 &lt;lt&gt;lt&lt;gt&gt;UNFILTERED&lt;lt&gt;gt&lt;gt&gt;"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="37"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="5"
+#!   SOURCE_PORT_DESC="fo 4 creatorUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="38"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="3"
+#!   SOURCE_PORT_DESC="fo 5 fieldWorkerUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="39"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="3"
+#!   SOURCE_PORT_DESC="fo 6 viewerUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.30196078431372547,0.30196078431372547,0.30196078431372547,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+
+FME_PYTHON_VERSION 311
+ARCGIS_COMPATIBILITY ARCGIS_AUTO
+GUI IGNORE SourceDataset_XLSXR_1,XLSXR_IN_ADVANCED_XLSXR_1,XLSXR_IN_SCAN_MAX_FEATURES_XLSXR_1,XLSXR_IN_READ_BLANK_AS_XLSXR_1,XLSXR_IN_EXPAND_MERGED_CELLS_XLSXR_1,XLSXR_IN_READ_RASTER_MODE_XLSXR_1,XLSXR_IN_READ_FORM_CONTROLS_XLSXR_1,XLSXR_IN_SCAN_FOR_GEOMETRIC_TYPES_XLSXR_1,XLSXR_IN_NETWORK_AUTHENTICATION_XLSXR_1
+# ============================================================================
+DEFAULT_MACRO DestDataset_XLSXW \\PortsmouthNH2\Data\FME\Portal\Users\Output
+
+DEFAULT_MACRO Portal 
+
+DEFAULT_MACRO Username 
+
+DEFAULT_MACRO Password 
+
+DEFAULT_MACRO SourceDataset_XLSXR $(FME_MF_DIR)ExampleUserSheet.xlsx
+
+# ============================================================================
+INCLUDE [ if {{$(DestDataset_XLSXW$encode)} == {}} { puts_real {Parameter 'DestDataset_XLSXW' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(Portal$encode)} == {}} { puts_real {Parameter 'Portal' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(Username$encode)} == {}} { puts_real {Parameter 'Username' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(Password$encode)} == {}} { puts_real {Parameter 'Password' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_XLSXR$encode)} == {}} { puts_real {Parameter 'SourceDataset_XLSXR' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+MULTI_READER_TYPE{0} XLSXR
+MULTI_READER_KEYWORD{0} XLSXR_1
+MULTI_READER_GEN_DIRECTIVES{0} _MERGE_SCHEMAS,YES,CASE_SENSITIVE_FEATURE_TYPES,YES,USE_CUSTOM_SCHEMA,NO,ALLOW_DOLLAR_SIGNS,YES,SCHEMA_HANDLING_REVISION,2,FORCE_DATETIME,NO,QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,SCAN_MAX_FEATURES,1000,SCHEMA,,CREATE_FEATURE_TABLES_FROM_DATA,Yes,EXPAND_MERGED_CELLS,Yes,SCAN_FOR_GEOMETRIC_TYPES,Yes,XLSXR_EXPOSE_FORMAT_ATTRS,,TABLELIST,,EXCEL_COL_NAMES,YES,ADVANCED,,READ_FORM_CONTROLS,NONE,APPLY_FILTERS,No,TRIM_ATTR_NAME_WHITESPACE,Yes,READ_RASTER_MODE,None,SKIP_EMPTY_ROWS,YES,CONFIGURATION_DATASET,,TRIM_ATTR_NAME_CHARACTERS,,EXPOSE_ATTRS_GROUP,,STRIP_SHEETNAME_SPACES,YES,REPLACE_ONLY_NEWLINES_CARRIAGE_RETURNS,YES,READ_BLANK_AS,Missing
+WRITER_TYPE MULTI_WRITER
+WRITER_KEYWORD MULTI_DEST
+MULTI_DEST_DATASET null
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "XLSXR_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER XLSXR XLSXR_1
+# ============================================================================
+# First get the dataset for the database. For Excel, it's the file name.
+# For now we'll use whatever they had when they generated this mapping file,
+# and not reprompt
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_XLSXR_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER XLSXR XLSXR_1
+DEFAULT_MACRO SourceDataset_XLSXR_1 $(SourceDataset_XLSXR)
+GUI MULTIFILE SourceDataset_XLSXR_1 Excel_Files(*.xlsx;*.xlsm;*.xls)|*.xlsx;*.xlsm;*.xls|Excel_Workbook_2007(*.xlsx)|*.xlsx|Excel_Macro_Workbook(*.xlsm)|*.xlsm|Excel_Binary_Workbook_-_Windows_Only(*.xlsb)|*.xlsb|Excel_Workbook_Pre_2007(*.xls)|*.xls|All_files(*)|* Source Microsoft Excel File(s):
+#GUI GROUP TABLELIST Constraints
+# TABLELIST is not shown in GUI, but is required for infrastructure
+# to not show the Table List popup
+DEFAULT_MACRO XLSXR_IN_CONFIGURATION_DATASET_XLSXR_1
+XLSXR_1_CONFIGURATION_DATASET "$(XLSXR_IN_CONFIGURATION_DATASET_XLSXR_1)"
+# Flag to switch from old naming scheme of col_1, col_2 etc. to a, b, etc.
+# To better match up with Excel files
+DEFAULT_MACRO XLSXR_IN_EXCEL_COL_NAMES_XLSXR_1 YES
+XLSXR_1_EXCEL_COL_NAMES "$(XLSXR_IN_EXCEL_COL_NAMES_XLSXR_1)"
+DEFAULT_MACRO XLSXR_IN_FORCE_DATETIME_XLSXR_1 NO
+XLSXR_1_FORCE_DATETIME "$(XLSXR_IN_FORCE_DATETIME_XLSXR_1)"
+DEFAULT_MACRO XLSXR_IN_ADVANCED_XLSXR_1 
+GUI OPTIONAL DISCLOSUREGROUP XLSXR_IN_ADVANCED_XLSXR_1 XLSXR_IN_APPLY_FILTERS%XLSXR_IN_SCAN_MAX_FEATURES_XLSXR_1%XLSXR_IN_TRIM_ATTR_NAME_WHITESPACE%XLSXR_IN_TRIM_ATTR_NAME_CHARACTERS%XLSXR_IN_READ_BLANK_AS_XLSXR_1%XLSXR_IN_EXPAND_MERGED_CELLS_XLSXR_1%XLSXR_IN_READ_RASTER_MODE_XLSXR_1%XLSXR_IN_READ_FORM_CONTROLS_XLSXR_1%XLSXR_IN_SCAN_FOR_GEOMETRIC_TYPES_XLSXR_1 Advanced
+DEFAULT_MACRO XLSXR_IN_SCAN_MAX_FEATURES_XLSXR_1 1000
+XLSXR_1_SCAN_MAX_FEATURES "$(XLSXR_IN_SCAN_MAX_FEATURES_XLSXR_1)"
+GUI RANGE_SLIDER XLSXR_IN_SCAN_MAX_FEATURES_XLSXR_1 0%MAX%0 Maximum Rows to Scan:
+DEFAULT_MACRO XLSXR_IN_READ_BLANK_AS_XLSXR_1 Missing
+XLSXR_1_READ_BLANK_AS "$(XLSXR_IN_READ_BLANK_AS_XLSXR_1)"
+GUI CHOICE XLSXR_IN_READ_BLANK_AS_XLSXR_1 Missing%Null Read Blank Cells As:
+DEFAULT_MACRO XLSXR_IN_TRIM_ATTR_NAME_WHITESPACE_XLSXR_1 Yes
+XLSXR_1_TRIM_ATTR_NAME_WHITESPACE "$(XLSXR_IN_TRIM_ATTR_NAME_WHITESPACE_XLSXR_1)"
+DEFAULT_MACRO XLSXR_IN_EXPAND_MERGED_CELLS_XLSXR_1 Yes
+XLSXR_1_EXPAND_MERGED_CELLS "$(XLSXR_IN_EXPAND_MERGED_CELLS_XLSXR_1)"
+GUI OPTIONAL CHECKBOX XLSXR_IN_EXPAND_MERGED_CELLS_XLSXR_1 Yes%No Expand Merged Cells:
+DEFAULT_MACRO XLSXR_IN_READ_RASTER_MODE_XLSXR_1 None
+XLSXR_1_READ_RASTER_MODE "$(XLSXR_IN_READ_RASTER_MODE_XLSXR_1)"
+GUI LOOKUP_CHOICE XLSXR_IN_READ_RASTER_MODE_XLSXR_1 None%Attribute%Geometry Read Embedded Images As:
+DEFAULT_MACRO XLSXR_IN_READ_FORM_CONTROLS_XLSXR_1 NONE
+XLSXR_1_READ_FORM_CONTROLS "$(XLSXR_IN_READ_FORM_CONTROLS_XLSXR_1)"
+GUI OPTIONAL CHECKBOX XLSXR_IN_READ_FORM_CONTROLS_XLSXR_1 CELL_VALUE%NONE Read Form Control as Cell Values:
+DEFAULT_MACRO XLSXR_IN_TRIM_ATTR_NAME_CHARACTERS_XLSXR_1
+XLSXR_1_TRIM_ATTR_NAME_CHARACTERS "$(XLSXR_IN_TRIM_ATTR_NAME_CHARACTERS_XLSXR_1)"
+DEFAULT_MACRO XLSXR_IN_SCAN_FOR_GEOMETRIC_TYPES_XLSXR_1 Yes
+XLSXR_1_SCAN_FOR_GEOMETRIC_TYPES "$(XLSXR_IN_SCAN_FOR_GEOMETRIC_TYPES_XLSXR_1)"
+GUI OPTIONAL CHECKBOX XLSXR_IN_SCAN_FOR_GEOMETRIC_TYPES_XLSXR_1 Yes%No Scan For Geometric Types:
+DEFAULT_MACRO XLSXR_IN_EXPOSE_ATTRS_GROUP_XLSXR_1
+XLSXR_1_EXPOSE_ATTRS_GROUP "$(XLSXR_IN_EXPOSE_ATTRS_GROUP_XLSXR_1)"
+DEFAULT_MACRO XLSXR_IN_APPLY_FILTERS_XLSXR_1 No
+XLSXR_1_APPLY_FILTERS "$(XLSXR_IN_APPLY_FILTERS_XLSXR_1)"
+DEFAULT_MACRO XLSXR_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_XLSXR_1 Yes
+XLSXR_1_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS "$(XLSXR_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_XLSXR_1)"
+DEFAULT_MACRO XLSXR_IN_CASE_SENSITIVE_FEATURE_TYPES_XLSXR_1 YES
+XLSXR_1_CASE_SENSITIVE_FEATURE_TYPES "$(XLSXR_IN_CASE_SENSITIVE_FEATURE_TYPES_XLSXR_1)"
+DEFAULT_MACRO XLSXR_IN_ALLOW_DOLLAR_SIGNS_XLSXR_1 YES
+XLSXR_1_ALLOW_DOLLAR_SIGNS "$(XLSXR_IN_ALLOW_DOLLAR_SIGNS_XLSXR_1)"
+DEFAULT_MACRO XLSXR_IN_CREATE_FEATURE_TABLES_FROM_DATA_XLSXR_1 Yes
+XLSXR_1_CREATE_FEATURE_TABLES_FROM_DATA "$(XLSXR_IN_CREATE_FEATURE_TABLES_FROM_DATA_XLSXR_1)"
+DEFAULT_MACRO XLSXR_IN_STRIP_SHEETNAME_SPACES_XLSXR_1 YES
+XLSXR_1_STRIP_SHEETNAME_SPACES "$(XLSXR_IN_STRIP_SHEETNAME_SPACES_XLSXR_1)"
+DEFAULT_MACRO XLSXR_IN_SCHEMA_HANDLING_REVISION_XLSXR_1 2
+XLSXR_1_SCHEMA_HANDLING_REVISION "$(XLSXR_IN_SCHEMA_HANDLING_REVISION_XLSXR_1)"
+DEFAULT_MACRO XLSXR_IN_SKIP_EMPTY_ROWS_XLSXR_1 YES
+XLSXR_1_SKIP_EMPTY_ROWS "$(XLSXR_IN_SKIP_EMPTY_ROWS_XLSXR_1)"
+DEFAULT_MACRO XLSXR_IN_REPLACE_ONLY_NEWLINES_CARRIAGE_RETURNS_XLSXR_1 YES
+XLSXR_1_REPLACE_ONLY_NEWLINES_CARRIAGE_RETURNS "$(XLSXR_IN_REPLACE_ONLY_NEWLINES_CARRIAGE_RETURNS_XLSXR_1)"
+# ===========================================================================
+DEFAULT_MACRO XLSXR_IN_NETWORK_AUTHENTICATION_XLSXR_1 
+XLSXR_1_NETWORK_AUTHENTICATION "$(XLSXR_IN_NETWORK_AUTHENTICATION_XLSXR_1)"
+GUI OPTIONAL AUTHENTICATOR XLSXR_IN_NETWORK_AUTHENTICATION_XLSXR_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ============================================================================
+DEFAULT_MACRO XLSXR_IN_ATTRIBUTE_READING_XLSXR_1 DEFLINE
+XLSXR_1_ATTRIBUTE_READING "$(XLSXR_IN_ATTRIBUTE_READING_XLSXR_1)"
+# ============================================================================
+XLSXR_1_GENERATE_FME_BUILD_NUM 23619
+XLSXR_1_DATASET "$(SourceDataset_XLSXR_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)PortalCleanup.log"
+LOG_APPEND NO
+LOG_FILTER_MASK -1
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+FME_NAMES_ENCODING UTF-8
+FME_BULK_MODE_THRESHOLD 2000
+LAST_SAVE_BUILD "FME 2023.1.0.0 (20230825 - Build 23619 - WIN64)"
+DEFAULT_MACRO DATASET_KEYWORD_XLSXR_1 XLSXR_1
+FME_PASSWORD_PARAMETER_LIST Password
+# -------------------------------------------------------------------------
+
+XLSXR_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME PortalCleanup
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_XLSXR_1)   INPUT FEATURE_TYPE *    ROUTE XLSXR XLSXR_1::Sheet1/Table1 multi_reader_keyword,$(DATASET_KEYWORD_XLSXR_1) TO FME_GENERIC ::Sheet1/Table1 ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+XLSXR_1_MERGE_DEF XLSXR_1::Sheet1/Table1 EXACT Sheet1<solidus>Table1 DEFLINE xlsx_start_row,,xlsx_end_row,,xlsx_apply_filters,No,fme_attribute_reading,defined,Username<space><openparen>Portal<closeparen>,string,Full<space>Name<space><openparen>Portal<closeparen>,string,License<space>Type,string,Role,string,Groups<space>Owned<space>Count,string,Groups<space>Owned<space>List,string,Last<space>Login,string,Last<space>Login<space><openparen>Pro<closeparen>,string,Termination<space>Date<space><openparen>TAPI<closeparen>,string,Disabled,string,Storage<space>Usage<space><openparen>Bytes<closeparen>,string,Account<space>Created,string,Account<space>Modified,string,Pro<space>Disconnected,string,Pro<space>Licenses,string,Username<space><openparen>TAPI<closeparen>,string,Full<space>Name<space><openparen>TAPI<closeparen>,string,Location,string,Job<space>Title,string,Department<space>Code,string,Department,string,Email,string,Supervisor<space>Name,string,Supervisor<space>Email,string
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Sheet1/Table1_XLSXR_1 Splitter"    INPUT FEATURE_TYPE Sheet1/Table1    OUTPUT FEATURE_TYPE Sheet1/Table1_XLSXR_1
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} TeeFactory    FACTORY_NAME { LicenseType }    INPUT  FEATURE_TYPE Sheet1/Table1_XLSXR_1    OUTPUT { FEATURE_TYPE LicenseType_FILTER }
+FACTORY_DEF {*} AttributeFilterFactory FACTORY_NAME LicenseType_Filter COMMAND_PARM_EVALUATION SINGLE_PASS INPUT FEATURE_TYPE LicenseType_FILTER FILTER_ATTRIBUTE { License<space>Type } FILTER_VALUES { <lt>EMPTY<gt> <lt>MISSING<gt> <lt>NULL<gt> <lt>UNFILTERED<gt> creatorUT fieldWorkerUT viewerUT } PRESERVE_FEATURE_ORDER PER_OUTPUT_PORT OUTPUT <lt>EMPTY<gt> FEATURE_TYPE LicenseType_<lt>EMPTY<gt> OUTPUT <lt>MISSING<gt> FEATURE_TYPE LicenseType_<lt>MISSING<gt> OUTPUT <lt>NULL<gt> FEATURE_TYPE LicenseType_<lt>NULL<gt> OUTPUT <lt>UNFILTERED<gt> FEATURE_TYPE LicenseType_<lt>UNFILTERED<gt> OUTPUT creatorUT FEATURE_TYPE LicenseType_creatorUT OUTPUT fieldWorkerUT FEATURE_TYPE LicenseType_fieldWorkerUT OUTPUT viewerUT FEATURE_TYPE LicenseType_viewerUT
+FACTORY_DEF * TeeFactory   FACTORY_NAME "LicenseType <lt>EMPTY<gt> Transformer Output Nuker"   INPUT FEATURE_TYPE LicenseType_<lt>EMPTY<gt>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "LicenseType <lt>MISSING<gt> Transformer Output Nuker"   INPUT FEATURE_TYPE LicenseType_<lt>MISSING<gt>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "LicenseType <lt>NULL<gt> Transformer Output Nuker"   INPUT FEATURE_TYPE LicenseType_<lt>NULL<gt>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "LicenseType <lt>UNFILTERED<gt> Transformer Output Nuker"   INPUT FEATURE_TYPE LicenseType_<lt>UNFILTERED<gt>
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} TeeFactory    FACTORY_NAME { ProUsers }    INPUT  FEATURE_TYPE LicenseType_creatorUT    OUTPUT { FEATURE_TYPE ProUsers_FILTER }
+FACTORY_DEF {*} AttributeFilterFactory FACTORY_NAME ProUsers_Filter COMMAND_PARM_EVALUATION SINGLE_PASS INPUT FEATURE_TYPE ProUsers_FILTER FILTER_ATTRIBUTE { Pro<space>Licenses } FILTER_VALUES { <lt>EMPTY<gt> <lt>MISSING<gt> <lt>NULL<gt> <lt>UNFILTERED<gt> } PRESERVE_FEATURE_ORDER PER_OUTPUT_PORT OUTPUT <lt>EMPTY<gt> FEATURE_TYPE ProUsers_<lt>EMPTY<gt> OUTPUT <lt>MISSING<gt> FEATURE_TYPE ProUsers_<lt>MISSING<gt> OUTPUT <lt>NULL<gt> FEATURE_TYPE ProUsers_<lt>NULL<gt> OUTPUT <lt>UNFILTERED<gt> FEATURE_TYPE ProUsers_<lt>UNFILTERED<gt>
+# -------------------------------------------------------------------------
+FME_PYTHON_PATH "$(FME_MF_DIR)"
+FACTORY_DEF {*} PythonFactory    FACTORY_NAME { RevokeLicense }    FLUSH_WHEN_GROUPS_CHANGE { <Unused> }    INPUT  FEATURE_TYPE ProUsers_<lt>UNFILTERED<gt>    SYMBOL_NAME { license_revoker }    SOURCE_CODE { import<space>fme<lf>import<space>fmeobjects<lf>from<space>arcgis.gis<space>import<space>GIS<lf><lf>gis<space>=<space>GIS<openparen>url=str<openparen>FME_MacroValues<openbracket><apos>Portal<apos><closebracket><closeparen><comma>username=str<openparen>FME_MacroValues<openbracket><apos>Username<apos><closebracket><closeparen><comma>password=str<openparen>FME_MacroValues<openbracket><apos>Password<apos><closebracket><closeparen><closeparen><lf><lf>def<space>license_revoker<openparen>feature<closeparen>:<lf><space><space><space><space>try:<lf><space><space><space><space><space><space><space><space>pro_license<space>=<space>gis.admin.license.get<openparen><apos>ArcGIS<space>Pro<apos><closeparen><lf><space><space><space><space><space><space><space><space>pro_license.assign<openparen>username=feature.getAttribute<openparen><apos>baseusername<apos><closeparen><comma><space>entitlements=<openbracket><closebracket><closeparen><lf><space><space><space><space>except<space>Exception<space>as<space>e:<lf><space><space><space><space><space><space><space><space>print<openparen>e<closeparen> }    OUTPUT { PYOUTPUT FEATURE_TYPE RevokeLicense_OUTPUT         }
+# -------------------------------------------------------------------------
+FME_PYTHON_PATH "$(FME_MF_DIR)"
+FACTORY_DEF {*} PythonFactory    FACTORY_NAME { contentCount_2 }    FLUSH_WHEN_GROUPS_CHANGE { <Unused> }    INPUT  FEATURE_TYPE ProUsers_<lt>EMPTY<gt>    INPUT  FEATURE_TYPE RevokeLicense_OUTPUT    INPUT  FEATURE_TYPE ProUsers_<lt>MISSING<gt>    INPUT  FEATURE_TYPE ProUsers_<lt>NULL<gt>    SYMBOL_NAME { contentCount }    SOURCE_CODE { import<space>fme<lf>import<space>fmeobjects<lf>from<space>arcgis.gis<space>import<space>GIS<lf>gis<space>=<space>GIS<openparen>url=str<openparen>FME_MacroValues<openbracket><apos>Portal<apos><closebracket><closeparen><comma>username=str<openparen>FME_MacroValues<openbracket><apos>Username<apos><closebracket><closeparen><comma>password=str<openparen>FME_MacroValues<openbracket><apos>Password<apos><closebracket><closeparen><closeparen><lf><lf>def<space>contentCount<openparen>feature<closeparen>:<lf><space><space><space><space>qe<space>=<space>f<quote>owner:<space><opencurly>feature.getAttribute<openparen><apos>baseusername<apos><closeparen><closecurly><quote><lf><space><space><space><space>content_count<space>=<space>gis.content.advanced_search<openparen>query=qe<comma>return_count=True<closeparen><lf><space><space><space><space>print<openparen>content_count<closeparen><lf><space><space><space><space>feature.setAttribute<openparen><apos>contentOwned<apos><comma><space>content_count<closeparen><lf><space><space><space><space>return<space>feature<lf> }    OUTPUT { PYOUTPUT FEATURE_TYPE contentCount_2_OUTPUT         }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} TestFactory    FACTORY_NAME { GroupsOwned_2 }    INPUT  FEATURE_TYPE contentCount_2_OUTPUT    TEST { "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>Groups<space>Owned<space>Count<closeparen>,GroupsOwned_2)" > 0 ENCODED } TEST { "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>contentOwned<closeparen>,GroupsOwned_2)" > 0 ENCODED }    BOOLEAN_OPERATOR { OR }    COMPOSITE_TEST_EXPR { "<Unused>" }    PRESERVE_FEATURE_ORDER { PER_OUTPUT_PORT }    OUTPUT { PASSED FEATURE_TYPE GroupsOwned_2_PASSED         }    OUTPUT { FAILED FEATURE_TYPE GroupsOwned_2_FAILED         }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} TestFactory    FACTORY_NAME { CheckForNullValues_2 }    INPUT  FEATURE_TYPE GroupsOwned_2_FAILED    TEST { contentOwned ATTRIBUTE_VALUE_NULL "" ENCODED } TEST { Groups<space>Owned<space>Count ATTRIBUTE_VALUE_NULL "" ENCODED }    BOOLEAN_OPERATOR { OR }    COMPOSITE_TEST_EXPR { "<Unused>" }    PRESERVE_FEATURE_ORDER { PER_OUTPUT_PORT }    OUTPUT { PASSED FEATURE_TYPE CheckForNullValues_2_PASSED         }    OUTPUT { FAILED FEATURE_TYPE CheckForNullValues_2_FAILED         }
+# -------------------------------------------------------------------------
+FME_PYTHON_PATH "$(FME_MF_DIR)"
+FACTORY_DEF {*} PythonFactory    FACTORY_NAME { DisableUser }    FLUSH_WHEN_GROUPS_CHANGE { <Unused> }    INPUT  FEATURE_TYPE GroupsOwned_2_PASSED    INPUT  FEATURE_TYPE CheckForNullValues_2_PASSED    SYMBOL_NAME { disableUser }    SOURCE_CODE { import<space>fme<lf>import<space>fmeobjects<lf>from<space>arcgis.gis<space>import<space>GIS<lf>gis<space>=<space>GIS<openparen>url=str<openparen>FME_MacroValues<openbracket><apos>Portal<apos><closebracket><closeparen><comma>username=str<openparen>FME_MacroValues<openbracket><apos>Username<apos><closebracket><closeparen><comma>password=str<openparen>FME_MacroValues<openbracket><apos>Password<apos><closebracket><closeparen><closeparen><lf><lf>def<space>disableUser<openparen>feature<closeparen>:<lf><space><space><space><space>try:<lf><space><space><space><space><space><space><space><space>user<space>=<space>gis.users.get<openparen>username=feature.getAttribute<openparen><apos>baseusername<apos><closeparen><closeparen><lf><space><space><space><space><space><space><space><space>user.disable<openparen><closeparen><lf><space><space><space><space><space><space><space><space>#feature.setAttribute<openparen><apos>contentOwned<apos><comma><space>content_count<closeparen><lf><space><space><space><space><space><space><space><space>return<space>feature<lf><space><space><space><space>except<space>Exception<space>as<space>e:<lf><space><space><space><space><space><space><space><space>print<openparen>e<closeparen> }    OUTPUT { PYOUTPUT FEATURE_TYPE DisableUser_OUTPUT         }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} TeeFactory    INPUT  FEATURE_TYPE DisableUser_OUTPUT    OUTPUT { FEATURE_TYPE ManualInterventionTable_PROCESSED       fme_html5_title "Users<space>Requiring<space>Manual<space>Intervention<space>"       fme_html5_config "HEADER{{TEXT;Users<space>Requiring<space>Manual<space>Intervention<space>;HEADER;NO;HEADER_ID;;ALIGNMENT;LEFT;COLOR;0<comma>0<comma>0}}TABLE{{STYLE;BORDERED;TABLE;Full<space>Name<space><openparen>TAPI<closeparen>|Name/License<space>Type|License/Pro<space>Licenses|Pro?/Supervisor<space>Name|Boss<space>Name/Supervisor<space>Email|Boss<space>Email/Platform|Portal<space>or<space>AGO?/contentOwned|Number<space>of<space>Items/Groups<space>Owned<space>Count|Groups<space>Owned"       fme_html5_xformer_name "ManualInterventionTable" }
+FACTORY_DEF {*} PythonFactory    FACTORY_NAME { ManualInterventionTable }    FLUSH_WHEN_GROUPS_CHANGE { <Unused> }    INPUT { FEATURE_TYPE ManualInterventionTable_PROCESSED }    SYMBOL_NAME reportgenerator.html5assembler.HTML5Assembler    OUTPUT { PYOUTPUT FEATURE_TYPE ManualInterventionTable_OUTPUT            }
+# -------------------------------------------------------------------------
+FME_PYTHON_PATH "$(FME_MF_DIR)"
+FACTORY_DEF {*} PythonFactory    FACTORY_NAME { GroupRemover_2 }    FLUSH_WHEN_GROUPS_CHANGE { <Unused> }    INPUT  FEATURE_TYPE CheckForNullValues_2_FAILED    SYMBOL_NAME { groupRemover }    SOURCE_CODE { import<space>fme<lf>import<space>fmeobjects<lf>from<space>arcgis.gis<space>import<space>GIS<lf>gis<space>=<space>GIS<openparen>url=str<openparen>FME_MacroValues<openbracket><apos>Portal<apos><closebracket><closeparen><comma>username=str<openparen>FME_MacroValues<openbracket><apos>Username<apos><closebracket><closeparen><comma>password=str<openparen>FME_MacroValues<openbracket><apos>Password<apos><closebracket><closeparen><closeparen><lf><lf><lf>def<space>groupRemover<openparen>feature<closeparen>:<lf><space><space><space><space>portaluser<space>=<space>gis.users.get<openparen>username<space>=<space>feature.getAttribute<openparen><apos>baseusername<apos><closeparen><closeparen><lf><space><space><space><space>if<space>portaluser<space>!=<space>None:<lf><space><space><space><space><space><space><space><space>user_groups<space>=<space>portaluser.groups<lf><space><space><space><space><space><space><space><space>for<space>group<space>in<space>user_groups:<lf><space><space><space><space><space><space><space><space><space><space><space><space>targetgroup<space>=<space>gis.groups.get<openparen>group.id<closeparen><lf><space><space><space><space><space><space><space><space><space><space><space><space>targetgroup.remove_users<openparen><openbracket>portaluser<closebracket><closeparen><lf><space><space><space><space>if<space>portaluser<space>==<space>None:<lf><space><space><space><space><space><space><space><space>portaluser<space>=<space>gis.users.get<openparen>username<space>=<space>feature.getAttribute<openparen><apos>baseusername<apos><closeparen>+<quote><at>terracon.com<quote><closeparen><lf><space><space><space><space><space><space><space><space>try:<lf><space><space><space><space><space><space><space><space><space><space><space><space>user_groups<space>=<space>portaluser.groups<lf><space><space><space><space><space><space><space><space><space><space><space><space>for<space>group<space>in<space>user_groups:<space><lf><space><space><space><space><space><space><space><space><space><space><space><space><space><space><space><space>targetgroup<space>=<space>gis.groups.get<openparen>group.id<closeparen><lf><space><space><space><space><space><space><space><space><space><space><space><space><space><space><space><space>targetgroup.remove_users<openparen><openbracket>portaluser<closebracket><closeparen><lf><space><space><space><space><space><space><space><space>except<space>Exception<space>as<space>e:<lf><space><space><space><space><space><space><space><space><space><space><space><space>print<openparen>e<closeparen><lf><lf><space><space><space><space><space> }    OUTPUT { PYOUTPUT FEATURE_TYPE GroupRemover_2_OUTPUT         }
+# -------------------------------------------------------------------------
+FME_PYTHON_PATH "$(FME_MF_DIR)"
+FACTORY_DEF {*} PythonFactory    FACTORY_NAME { DeleteUser_2 }    FLUSH_WHEN_GROUPS_CHANGE { <Unused> }    INPUT  FEATURE_TYPE GroupRemover_2_OUTPUT    SYMBOL_NAME { deleteUser }    SOURCE_CODE { import<space>fme<lf>import<space>fmeobjects<lf>from<space>arcgis.gis<space>import<space>GIS<lf>gis<space>=<space>GIS<openparen>url=str<openparen>FME_MacroValues<openbracket><apos>Portal<apos><closebracket><closeparen><comma>username=str<openparen>FME_MacroValues<openbracket><apos>Username<apos><closebracket><closeparen><comma>password=str<openparen>FME_MacroValues<openbracket><apos>Password<apos><closebracket><closeparen><closeparen><lf><lf>def<space>deleteUser<openparen>feature<closeparen>:<lf><space><space><space><space>try:<lf><space><space><space><space><space><space><space><space>portaluser<space>=<space>gis.users.get<openparen>username<space>=<space>feature.getAttribute<openparen><apos>baseusername<apos><closeparen><closeparen><lf><space><space><space><space><space><space><space><space>portaluser.delete<openparen><closeparen><lf><space><space><space><space><space><space><space><space>return<space>feature<lf><space><space><space><space>except<space>Exception<space>as<space>e:<lf><space><space><space><space><space><space><space><space>print<openparen>e<closeparen><lf><space><space><space> }    OUTPUT { PYOUTPUT FEATURE_TYPE DeleteUser_2_OUTPUT         }
+# -------------------------------------------------------------------------
+FME_PYTHON_PATH "$(FME_MF_DIR)"
+FACTORY_DEF {*} PythonFactory    FACTORY_NAME { GroupRemover }    FLUSH_WHEN_GROUPS_CHANGE { <Unused> }    INPUT  FEATURE_TYPE LicenseType_fieldWorkerUT    INPUT  FEATURE_TYPE LicenseType_viewerUT    SYMBOL_NAME { groupRemover }    SOURCE_CODE { import<space>fme<lf>import<space>fmeobjects<lf>from<space>arcgis.gis<space>import<space>GIS<lf>gis<space>=<space>GIS<openparen>url=str<openparen>FME_MacroValues<openbracket><apos>Portal<apos><closebracket><closeparen><comma>username=str<openparen>FME_MacroValues<openbracket><apos>Username<apos><closebracket><closeparen><comma>password=str<openparen>FME_MacroValues<openbracket><apos>Password<apos><closebracket><closeparen><closeparen><lf><lf><lf>def<space>groupRemover<openparen>feature<closeparen>:<lf><space><space><space><space>portaluser<space>=<space>gis.users.get<openparen>username<space>=<space>feature.getAttribute<openparen><apos>baseusername<apos><closeparen><closeparen><lf><space><space><space><space>if<space>portaluser<space>!=<space>None:<lf><space><space><space><space><space><space><space><space>user_groups<space>=<space>portaluser.groups<lf><space><space><space><space><space><space><space><space>for<space>group<space>in<space>user_groups:<lf><space><space><space><space><space><space><space><space><space><space><space><space>targetgroup<space>=<space>gis.groups.get<openparen>group.id<closeparen><lf><space><space><space><space><space><space><space><space><space><space><space><space>targetgroup.remove_users<openparen><openbracket>portaluser<closebracket><closeparen><lf><space><space><space><space>if<space>portaluser<space>==<space>None:<lf><space><space><space><space><space><space><space><space>portaluser<space>=<space>gis.users.get<openparen>username<space>=<space>feature.getAttribute<openparen><apos>baseusername<apos><closeparen>+<quote><at>yourcompany.com<quote><closeparen><lf><space><space><space><space><space><space><space><space>try:<lf><space><space><space><space><space><space><space><space><space><space><space><space>user_groups<space>=<space>portaluser.groups<lf><space><space><space><space><space><space><space><space><space><space><space><space>for<space>group<space>in<space>user_groups:<space><lf><space><space><space><space><space><space><space><space><space><space><space><space><space><space><space><space>targetgroup<space>=<space>gis.groups.get<openparen>group.id<closeparen><lf><space><space><space><space><space><space><space><space><space><space><space><space><space><space><space><space>targetgroup.remove_users<openparen><openbracket>portaluser<closebracket><closeparen><lf><space><space><space><space><space><space><space><space>except<space>Exception<space>as<space>e:<lf><space><space><space><space><space><space><space><space><space><space><space><space>print<openparen>e<closeparen><lf><space><space><space><space>return<space>feature<lf><lf><space><space><space><space><space> }    OUTPUT { PYOUTPUT FEATURE_TYPE GroupRemover_OUTPUT         }
+# -------------------------------------------------------------------------
+FME_PYTHON_PATH "$(FME_MF_DIR)"
+FACTORY_DEF {*} PythonFactory    FACTORY_NAME { DeleteUser }    FLUSH_WHEN_GROUPS_CHANGE { <Unused> }    INPUT  FEATURE_TYPE GroupRemover_OUTPUT    SYMBOL_NAME { deleteUser }    SOURCE_CODE { import<space>fme<lf>import<space>fmeobjects<lf>from<space>arcgis.gis<space>import<space>GIS<lf>gis<space>=<space>GIS<openparen>url=str<openparen>FME_MacroValues<openbracket><apos>Portal<apos><closebracket><closeparen><comma>username=str<openparen>FME_MacroValues<openbracket><apos>Username<apos><closebracket><closeparen><comma>password=str<openparen>FME_MacroValues<openbracket><apos>Password<apos><closebracket><closeparen><closeparen><lf><lf>def<space>deleteUser<openparen>feature<closeparen>:<lf><space><space><space><space>try:<lf><space><space><space><space><space><space><space><space>portaluser<space>=<space>gis.users.get<openparen>username<space>=<space>feature.getAttribute<openparen><apos>baseusername<apos><closeparen><closeparen><lf><space><space><space><space><space><space><space><space>portaluser.delete<openparen><closeparen><lf><space><space><space><space>except<space>Exception<space>as<space>e:<lf><space><space><space><space><space><space><space><space>print<openparen>e<closeparen><lf><space><space><space><space><space><space><space><lf><space><space><space><space> }    OUTPUT { PYOUTPUT FEATURE_TYPE DeleteUser_OUTPUT         }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} TeeFactory    INPUT  FEATURE_TYPE DeleteUser_OUTPUT    INPUT  FEATURE_TYPE DeleteUser_2_OUTPUT    OUTPUT { FEATURE_TYPE DeletedUsersTable_PROCESSED       fme_html5_title "@EvaluateExpression(FDIV,STRING_ENCODED,$(DestDataset_XLSXW$encode),DeletedUsersTable)"       fme_html5_config "HEADER{{TEXT;Users<space>Deleted;HEADER;NO;HEADER_ID;;ALIGNMENT;LEFT;COLOR;0<comma>0<comma>0}}TABLE{{STYLE;BORDERED;TABLE;Full<space>Name<space><openparen>TAPI<closeparen>|Name/License<space>Type|License/Pro<space>Licenses|Pro?/Supervisor<space>Name|Boss<space>Name/Supervisor<space>Email|Boss<space>Email/Platform|Portal<space>or<space>AGO?/contentOwned|Number<space>of<space>Items/Groups<space>Owned<space>Count|Groups<space>Owned"       fme_html5_xformer_name "DeletedUsersTable" }
+FACTORY_DEF {*} PythonFactory    FACTORY_NAME { DeletedUsersTable }    FLUSH_WHEN_GROUPS_CHANGE { <Unused> }    INPUT { FEATURE_TYPE DeletedUsersTable_PROCESSED }    SYMBOL_NAME reportgenerator.html5assembler.HTML5Assembler    OUTPUT { PYOUTPUT FEATURE_TYPE DeletedUsersTable_OUTPUT            }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} TeeFactory    INPUT  FEATURE_TYPE ManualInterventionTable_OUTPUT    INPUT  FEATURE_TYPE DeletedUsersTable_OUTPUT    OUTPUT { FEATURE_TYPE HTMLLayouter_PROCESSED       fme_html5_layout "VERTICAL"       fme_html5_column "<Unused>"       fme_html5_row "<Unused>"       fme_html5_title ""       fme_html5_div_style "SOLID" }
+FACTORY_DEF {*} PythonFactory    FACTORY_NAME { HTMLLayouter }    FLUSH_WHEN_GROUPS_CHANGE { <Unused> }    INPUT { FEATURE_TYPE HTMLLayouter_PROCESSED }    SYMBOL_NAME reportgenerator.html5layouter.HTML5Layouter    OUTPUT { PYOUTPUT FEATURE_TYPE HTMLLayouter_OUTPUT        }
+# -------------------------------------------------------------------------
+# Note -- the AttachmentTable has to have a SPACE as the first character so that we don't get the *bad*
+# FME Parser to start parsing a @ function call -- if @ is the first character, it will, and then we lose
+# our table elements :-(
+# The python later expects the first character to be a space so all is well.
+FACTORY_DEF {*} TeeFactory    FACTORY_NAME { Emailer_CATCHER }    INPUT  FEATURE_TYPE HTMLLayouter_OUTPUT    OUTPUT { FEATURE_TYPE Emailer_READY       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)       ___fme_emailer_service           "Generic SMTP"       ___fme_emailer_connection        "HOST;;PORT;25;ENCRYPTION;None;TIMEOUT;60;AUTHENTICATION;No;USERNAME;<Unused>;PASSWORD;<Unused>"       ___fme_emailer_from              ""       ___fme_emailer_to                ""       ___fme_emailer_cc                ""       ___fme_emailer_bcc               ""       ___fme_emailer_subject           ""       ___fme_emailer_body              ""       ___fme_emailer_attachments       " "       ___fme_emailer_xformerName       "Emailer"   }
+FACTORY_DEF {*} PythonFactory    FACTORY_NAME { Emailer_CALLER }    INPUT { FEATURE_TYPE Emailer_READY }    PYTHON_NAMESPACE FMEOBJECTS    SYMBOL_NAME fmepy_emailer.Emailer    OUTPUT { PYOUTPUT FEATURE_TYPE Emailer_PROCESSED }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME { Emailer_ROUTER }    INPUT { FEATURE_TYPE Emailer_PROCESSED }    TEST &fme_rejection_code == ""    OUTPUT { FAILED FEATURE_TYPE Emailer_<REJECTED>       @RemoveAttributes(___fme_rejection_code___)        }
+DEFAULT_MACRO _WB_BYPASS_TERMINATION No
+FACTORY_DEF * TeeFactory FACTORY_NAME Emailer_<Rejected> INPUT FEATURE_TYPE Emailer_<REJECTED>  NO_LOGGING   OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, Emailer<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
